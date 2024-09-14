@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptop</title>
+    <style>
+                    .h{
+                        background-color: black;
+                        height: 73px;
+                        width: 100%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    img.p {
+                        height: 40px;
+                        background-color: black;
+                        width: 45px;
+                        display: flex;
+                        border-color: black;
+                    }
+
+                    .tc {
+                        position: absolute;
+                        height: 45px;
+                        width: 45px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #30ae69;
+                        margin: 10px;
+                    }
+
+                    .txt {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 20px;
+                        font-family: sans-serif;
+                        padding-left: 20px;
+                        position: absolute;
+                    }
+
+                    .right {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-end;
+                        align-items: center;
+                        margin: 10px;
+                        padding: 10px;
+                    }
+
+                    .box {
+                        display: flex;
+                        color: white;
+                        font-family: sans-serif;
+                        font-size: 16px;
+                        justify-content: space-evenly;
+                        width: 853px;
+                        height: 43px;
+                    }
+
+                    .box:hover {
+                        text-decoration: underline;
+                    }
+
+                    p {
+                    
+                        text-align: center;
+                        align-items: center;
+                        align-content: space-between;
+                    }
+
+                    /* slider css */
+                    section.slide {
+                        margin: 0px;
+                        padding: 0px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 90%;
+                    }
+
+                    .s {
+                        width: 100%;
+                        height: 546px;
+                        overflow: hidden;
+                    }
+
+                    .si {
+                        width: 500%;
+                        height: 500px;
+                        display: flex;
+                    }
+
+                    .si input {
+                        display: none;
+                    }
+
+                    .firstpic {
+                        width: 20%;
+                        transition: 2s;
+                    }
+
+                    .firstpic img {
+                        width: 100%;
+                        height: 500px;
+                    }
+
+                    .navman {
+                        position: absolute;
+                        width: 100%;
+                        margin-top: -40px;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .man-btn {
+                        border: 2px solid white;
+                        width: 14px;
+                        height: 14px;
+                        background-color: transparent;
+                        border-radius: 100%;
+                        opacity: 1;
+                        margin-right: 10px;
+                    }
+                    label.man-btn:hover {
+                        border:5px solid white;
+                        border-color: white;
+                    }
+                    #radio1:checked ~ .first{
+                        margin-left: 0;
+
+                    }
+                    #radio2:checked ~ .first{
+                        margin-left: -20%;
+
+                    }
+                    #radio3:checked ~ .first{
+                        margin-left: -40%;
+
+                    }
+                    #radio4:checked ~ .first{
+                        margin-left: -60%;
+
+                    }
+                    #radio5:checked ~ .first{
+                        margin-left: -80%;
+
+                    }
+                    /* slider upper img */
+                    .row {
+                        display: flex;
+                        background: transparent;
+                        position: absolute;
+                        margin-top: 50px;
+                        margin-left: -15px;
+                        height: 319px;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        margin-right: 100%;
+                    }
+
+                    .lft {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        height: 221px;
+                        width: 559px;
+                        padding: 0px 15px;
+                    }
+
+                    .rgt {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .b {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 16px;
+                        font-family: sans-serif;
+                        background-color: black;
+                        padding: 10px 45px;
+                        margin-top: 35px;
+                        border: 1px solid black;
+                        border-radius: 5px;
+                    }
+                    h1 {
+                        color: white;
+                        font-size: 64px;
+                        font-family: sans-serif;
+                        margin: 0px 0px 8px;
+                    }
+
+                    h2 {
+                        color: white;
+                        font-size: 40px;
+                        font-family: sans-serif;
+                        margin: 0px 0px 8px;
+                    }
+                    img.uf {
+                        height: 319px;
+                        width: 370px;
+                    }
+                    /* 3rd section */
+                    .single {
+                        color: black;
+                        font-size: 32px;
+                        font-family: sans-serif;
+                        position: absolute;
+                        
+                        
+                    }
+
+                    .heading {
+                        background-color: #30ae69;
+                        width: 75px;
+                        height: 5px;
+                        display: flex;
+                        margin-left: 50%;
+                        margin-top: 90px;
+                        justify-content: center;
+                        align-items: flex-end;
+                    }
+
+                    .content {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        margin-top: 100px;
+                    }
+                    .sbox {
+                        width: 325px;
+                        background-color: #f6f5f7;
+                        overflow: hidden;
+                        margin: 20px;
+                        height: 200px;
+
+                    }
+                    .sbox:hover {
+                        background-color: #30ae69;
+                    }
+                    .sbox i{
+                        width: 100%;
+                        height: auto;
+                    }
+                    .text {
+                        display: flex;
+                        align-items: center;
+                        font-family: sans-serif;
+                        width: 325px;
+                        height: 200px;
+                        flex-direction: column;
+                        padding-left: 20px;
+                    }
+
+                    .imgbox {
+                        height: 200px;
+                        width: 75px;
+                        align-content: center;
+                        margin-left: 45%;
+                        margin-right: 45%;
+                    }
+                    h5 {
+                        font-size: 20px;
+                        font-family: sans-serif;
+                        margin: 0px 0px 8px;
+                    }
+                    .details {
+                        font-size: 16px;
+                        font-family: sans-serif;
+                        color: #b8b8b8;
+                    }
+                    .threelast {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .ay {
+                        text-align: center;
+                    }                  
+/* 4th section css */
+.fourbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tsize {
+    font-size: 16px;
+    font-family: sans-serif;
+    margin: 0px 0px 16px;
+}
+img.forshadow {
+    filter: drop-shadow(0px 36px 13px rgba(0, 0, 0, 0.3));
+}
+/* 4th cmplt */
+/* 5th sec css */
+h2.power {
+    color: white;
+    font-family: sans-serif;
+    font-size: 32px;
+    margin: 0px 0px 20px;
+}
+
+section.connect {
+    background: linear-gradient(to right, #30ae69, #072e85);
+    margin-top: 90px;
+}
+.rai {
+    text-align: justify;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0px 0px 16px;
+}
+.dwnld {
+    margin: 55px 0px 0px;
+    display: flex;
+    align-items: center;
+}
+h4 {
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    margin: 0px 25px 8px 0px;
+}
+.doublerow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftrow {
+    width: 50%;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.rightrowimg {
+   
+    display: flex;
+    align-items: center;
+}
+
+.fullrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 6th section css */
+section.auto {
+    padding: 90px 0px;
+}
+/* 7th section css */
+.fam {
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0px 0px 8px;
+    color: #6d6c6c;
+}
+
+h6 {
+    font-family: sans-serif;
+    font-size: 12px;
+    margin: 0px 0px 8px;
+    text-transform: uppercase;
+    padding-top: 15px;
+
+}
+
+.boxone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 3px 15px 1px rgb(138, 141, 141);
+    padding: 0px 10px 5px 10px;
+    margin-right: 25px;
+}
+.caseone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 3px 15px 1px rgb(138, 141, 141);
+    padding: 0px 10px 5px 10px;
+    margin-right: 25px;
+}
+.boxtwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 16px;
+    font-family: sans-serif;
+    margin: 0px 0px 16px;
+}
+.casetwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 16px;
+    font-family: sans-serif;
+    margin: 0px 0px 16px;
+}
+.clientone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 45px 162px;
+    width: 65%;
+}
+
+.clienttwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 45px 162px;
+    width: 65%;
+}
+.client {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.testi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 90px;
+}
+/* last css */
+section.foot {
+    background-color: #171717;
+    padding: 50px 120px;
+    padding-bottom: 100px;
+}
+
+.allcall {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+}
+p.demo {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 16px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+}
+a.bye {
+    text-decoration: none;
+    color: white;
+    background-color: #30ae69;
+    padding: 8px 35px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    border: 1px solid #30ae69;
+}
+.contact {
+    width: 150px;
+}
+h1.fat {
+    font-size: 50px;
+    background-color: #30ae69;
+    width: 60px;
+    height: 55px;
+}
+.invest {
+    padding-left: 10%;
+    width: 150px;
+}
+.link {
+    width: 150px;
+    padding-left: 30px;
+}
+input.mail {
+    margin-bottom: 30px;
+    border: 3px solid white;
+    background-color: transparent;
+    padding: 7px 10px;
+    width: 150px;
+    display: flex;
+    padding-right: 50px;
+}
+h2.stack {
+    font-size: 22px;
+}
+.letter {
+    padding-left: 30px;
+}
+    </style>
+
+
+
+</head>
+<body>
+<!-- 1st section header -->
+    <header class="first">
+        <div class="h">
+            <div class="left">
+                <a class="tc" href="#"></a>
+                <p class="txt">Cryptop</p>
+            </div>
+            <div class="right">
+                <div class="box">
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>How</p>
+                    <p>Wallet <img src="/wallet.png" alt="wallet icon"></p>
+                    <p>Login</p>
+                    <p>Sign up</p>
+                    <p><img src="/search-icon.png" alt="search icon"></p>
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- end of header section -->
+
+
+<!-- 2nd slider section -->
+  <section class="slide">
+        <div class="s">
+            <div class="si">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+<!-- pic -->
+                <div class="firstpic first">
+                    <img src="/hero-bg.jpg" alt="background img">
+                </div>
+                <div class="firstpic">
+                    <img src="/hero-bg.jpg" alt="background img">
+                </div>
+                <div class="firstpic">
+                    <img src="/hero-bg.jpg" alt="background img">
+                </div>
+                <div class="firstpic">
+                    <img src="/hero-bg.jpg" alt="background img">
+                </div>
+                <div class="firstpic">
+                    <img src="/hero-bg.jpg" alt="background img">
+                </div>
+                        <div class="row">
+                            <div class="lft">
+                                <h1>Digital Currency</h1>
+                                <h2>The Future of Trading.</h2>
+                                <a class="b" href="#">Get Started</a>
+                            </div>
+                            <div class="rgt">
+                                <img class="uf" src="/slider-img.png" alt="image">
+                            </div>
+                        </div>
+<!-- auto navigation -->
+            <div class="navauto">
+                <div class="autobtn1"></div>
+                <div class="autobtn2"></div>
+                <div class="autobtn3"></div>
+                <div class="autobtn4"></div>
+                <div class="autobtn5"></div>
+            </div>
+
+
+            </div>
+<!-- manual nav -->
+             <div class="navman">
+                <label for="radio1" class="man-btn"></label>
+                <label for="radio2" class="man-btn"></label>
+                <label for="radio3" class="man-btn"></label>
+                <label for="radio4" class="man-btn"></label>
+                <label for="radio5" class="man-btn"></label>
+             </div>
+        </div>
+  </section>
+<!-- 2nd sec cmplt -->
+
+
+<!-- 3rd section start-->
+        <section class="work">
+            <div class="heading">
+                <h2 class="single">How It works?</h2>
+            </div>
+<!-- all of the content boxes -->
+        <div class="content">
+
+            <div class="allbox">
+                <div class="sbox">
+                    <div class="imgbox"><i class="fa-solid fa-globe fa-2xl" style="color: #000000;"></i></div>
+                </div>
+                        <div class="text">
+                        <h5>Traders and investors</h5>
+                        <div class="details"><p class="ay">Amar mathay kisui dhore na, ami din raat boisha boisha bair kori kontar pore konta hoibo tao mile na, dhorjo dhorte dhorte mental hoiya jaitesi sir!</p></div>
+                        </div>
+            </div>
+
+
+            <div class="allbox"> 
+                <div class="sbox">
+                    <div class="imgbox"><i class="fa-solid fa-tv fa-2xl" style="color: #000000;"></i></div>
+                </div>
+                        <div class="text">
+                        <h5>Exchanges</h5>
+                        <div class="details"><p class="ay">Amar mathay kisui dhore na, ami din raat boisha boisha bair kori kontar pore konta hoibo tao mile na, dhorjo dhorte dhorte mental hoiya jaitesi sir!</p></div>
+                        </div>
+            </div>
+
+
+            <div class="allbox">            
+                <div class="sbox">
+                    <div class="imgbox"><i class="fa-solid fa-arrows-rotate fa-2xl" style="color: #000000;"></i></div>
+                </div>
+                        <div class="text">
+                        <h5>Miners</h5>
+                        <div class="details"><p class="ay">Amar mathay kisui dhore na, ami din raat boisha boisha bair kori kontar pore konta hoibo tao mile na, dhorjo dhorte dhorte mental hoiya jaitesi sir!</p></div>
+                        </div>
+            </div>
+
+
+            <div class="allbox">
+                <div class="sbox">
+                     <div class="imgbox"><i class="fa-solid fa-money-check-dollar fa-2xl" style="color: #000000;"></i></div>
+                </div>
+                        <div class="text">
+                        <h5>Payments</h5>
+                        <div class="details"><p class="ay">Amar mathay kisui dhore na, ami din raat boisha boisha bair kori kontar pore konta hoibo tao mile na, dhorjo dhorte dhorte mental hoiya jaitesi sir!</p></div>
+                         </div>
+            </div>
+         </div>
+<!-- all of the content boxes cmplt -->
+
+            <div class="threelast">
+                <a class="b" href="#">Read More</a>
+            </div>    
+        </section>
+<!-- 3rd sec cmplt -->
+
+
+<!-- 4th sec start -->
+ <section class="about">
+<div class="heading">
+    <h2 class="single">About Cryptop</h2>
+</div>            
+        <div class="fourbox">
+            <img class="forshadow" src="/about-img.png" alt="coin pic">
+            <p class="tsize">Ar partesinaaaa, saradin pc er shamne boisha thaikka back pain shuru hoiseeee!Kobe shesh hoibo, Ya Allah!</p>
+            <div class="threelast">
+                <a class="b" href="#">Read More</a>
+            </div>
+        </div>
+</section>
+<!-- 4th section cmplt -->
+
+<!-- 5th section start -->
+ <section class="connect">
+    <div class="fullrow">
+        <div class="doublerow">
+            <div class="leftrow">
+                <h2 class="power">Our Powerful app to connect it all</h2>
+                <p class="rai">nusratsuchona is a sad girl who doesn't have any clue what to do. She is so messed up right now. Such a Skibidi!</p>
+                <div class="dwnld">
+                    <h4>Download Now</h4>
+                    <div class="twoboximg">
+                        <a href="#"><img src="/app-store.png" alt="app store"></a>
+                        <a href="#"><img src="/play-store.png" alt="play-store"></a>
+                    </div>
+                </div>
+            </div>
+                        <div class="rightrowimg">
+                            <img src="/slider-img.png" alt="Image">
+                        </div>
+        </div>
+    </div>
+ </section>
+ <!-- 5th section cmplt -->
+
+ <!-- 6th section start -->
+        <section class="auto">
+
+            <div class="heading">
+                <h2 class="single">Start Automatic Now</h2>
+            </div>
+
+            <div class="fourbox">
+                <img  src="/auto-img.png" alt="coin pic">
+                <p class="tsize">Ar partesinaaaa, saradin pc er shamne boisha thaikka back pain shuru hoiseeee!Kobe shesh hoibo, Ya Allah!</p>
+                <div class="threelast">
+                    <a class="b" href="#">Register now</a>
+                </div>
+            </div>
+        </section>
+<!-- 6th section cmplt -->
+
+<!-- 7th section start -->
+        <section class="testi">
+
+            <div class="heading">
+                <h2 class="single">Testimonial</h2>
+            </div>
+
+            <div class="client">
+
+                <div class="clientone">
+                    <div class="boxone">
+                        <img src="/client-1.jpg" alt="client pic one">
+                        <h6>Nusrat</h6>
+                        <p class="fam">Content of a page</p>
+                    </div>
+                    <div class="boxtwo">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Cryptop is nothing but fun hehe!</p>
+                    </div>
+                </div>
+                <div class="clienttwo">
+                    <div class="caseone">
+                        <img src="/client-2.jpg" alt="client pic two">
+                        <h6>Suchona</h6>
+                        <p class="fam">Content of a page</p>
+                    </div>
+                    <div class="casetwo">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Cryptop is nothing but fun hehe!</p>
+                    </div>
+                </div>
+                <div class="threelast">
+                    <a class="b" href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+<!-- 7th section cmplt -->
+
+<!-- last footer sec -->
+        <section class="foot">
+            <div class="allcall">
+                <div class="contact">
+                    <h1 class="fat">Cryptop</h1>
+                    <h2 class="stack">Contact Us</h2>
+                    <p class="demo"><img src="/location.png" alt="location">Bangladesh, Cumilla</p>
+                    <p class="demo"><img src="/phone.png" alt="phone">01234567899</p>
+                    <p class="demo"><img src="/envelope.png" alt="mail">cryptop@gmail.com</p>
+                </div>
+                <div class="invest">
+                    <h2 class="stack">Invest Money</h2>
+                    <p class="demo">Investing is the act of distributing resources into something to generate income or gain profits.</p>
+                </div>
+                <div class="link">
+                    <h2 class="stack">Useful Links</h2>
+                    <p class="demo">Relevant links to a website can help bring in customers, especially in industries where a single lead is valuable</p>
+                </div>
+                <div class="letter">
+                    <h2 class="stack">Newsletter</h2>
+                    <input type="email" placeholder="Enter your E-mail" class="mail">
+                    <a class="bye" href="#">Subscribe</a>
+                </div>
+
+            </div>
+        </section>
+
+        <script src="https://kit.fontawesome.com/6e13c23b35.js" crossorigin="anonymous"></script>
+</body>
+</html>
